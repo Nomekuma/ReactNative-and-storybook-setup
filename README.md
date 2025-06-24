@@ -27,3 +27,9 @@ This documentation outlines the requirements and features for the Alulu app, a s
    - Description
    - Quantity
    - Image (default image provided)
+
+### Development
+
+Run `npm run dev` to start the Vite development server.
+Run `npm run storybook` to launch Storybook and view UI components in `src/components`.
+
