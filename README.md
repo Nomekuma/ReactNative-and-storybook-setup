@@ -31,7 +31,7 @@ This documentation outlines the requirements and features for the Alulu app, a s
 ### Development
 
 Run `npm run dev` to start the Vite development server.
-Run `npm run storybook` to launch Storybook and view UI components in `src/components`.
+Run `npm run storybook` to launch Storybook offline and view UI components in `src/components`.
 
 =======
 ## Development Setup
@@ -50,7 +50,7 @@ npm install
 
 ### Storybook
 
-Storybook is configured for React Native components. To run Storybook:
+Storybook is configured for React Native components. To run Storybook offline:
 
 ```sh
 npm run storybook
