@@ -41,7 +41,7 @@ if (parameters) {
 
 const getStories = () => {
   return {
-    "./src/components/Example.native.stories.tsx": require("../src/components/Example.native.stories.tsx"),
+    "./src/components/example/Example.native.stories.tsx": require("../src/components/example/Example.native.stories.tsx"),
   };
 };
 
