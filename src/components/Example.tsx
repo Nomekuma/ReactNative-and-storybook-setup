@@ -1,3 +1,5 @@
+import { Text } from "react-native";
+
 export const Example = () => {
-  return <button>Example</button>;
+  return <Text>Example</Text>;
 };

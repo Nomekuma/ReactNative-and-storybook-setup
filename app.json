@@ -1,4 +1,8 @@
 {
-  "name": "alulu",
-  "displayName": "Alulu"
+  "expo": {
+    "assetBundlePatterns": ["**/*"],
+    "extra": {
+      "storybookEnabled": "false"
+    }
+  }
 }
