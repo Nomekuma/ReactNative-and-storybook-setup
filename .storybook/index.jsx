@@ -6,6 +6,7 @@ const StorybookUIRoot = view.getStorybookUI({
     getItem: AsyncStorage.getItem,
     setItem: AsyncStorage.setItem,
   },
+  shouldPersistSelection: false,
 });
 
 export default StorybookUIRoot;
