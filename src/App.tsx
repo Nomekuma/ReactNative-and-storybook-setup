@@ -1,12 +1,25 @@
-import { Example } from './components/Example';
+import { LogBox } from "react-native";
+import Constants from "expo-constants";
+import { NavigationContainer } from "@react-navigation/native";
+import { createNativeStackNavigator } from "@react-navigation/native-stack";
+import { Home } from "./pages/Home";
+
+LogBox.ignoreLogs(["Warning: ...", "Require cycle: ..."]);
+const Stack = createNativeStackNavigator();
 
 function App() {
   return (
-    <div>
-      <h1>Hello Alulu</h1>
-      <Example />
-    </div>
+    <NavigationContainer>
+      <Stack.Navigator initialRouteName="Home">
+        <Stack.Screen name="Home" component={Home} />
+      </Stack.Navigator>
+    </NavigationContainer>
   );
 }
 
-export default App;
+let AppEntryPoint = App;
+if (Constants.expoConfig?.extra?.storybookEnabled === "true") {
+  AppEntryPoint = require("../.storybook").default;
+}
+
+export default AppEntryPoint;
