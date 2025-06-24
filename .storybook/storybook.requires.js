@@ -5,6 +5,7 @@ import {
   addDecorator,
   addParameters,
   clearDecorators,
+   getStorybookUI,
 } from "@storybook/react-native";
 
 global.STORIES = [
@@ -17,8 +18,8 @@ global.STORIES = [
   },
 ];
 
-import "@storybook/addon-links/register";
-import "@storybook/addon-essentials/register";
+import "@storybook/addon-ondevice-actions/register";
+import "@storybook/addon-ondevice-controls/register";
 
 import { decorators, parameters } from "./preview";
 
@@ -45,3 +46,10 @@ const getStories = () => {
 };
 
 configure(getStories, module, false);
+
+global.view =
+  global.view || {
+    getStorybookUI: (options) => getStorybookUI(options),
+  };
+
+export const view = global.view;
