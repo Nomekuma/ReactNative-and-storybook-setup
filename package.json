@@ -48,6 +48,8 @@
     "@storybook/addon-actions": "^6.5.14",
     "@storybook/addon-ondevice-actions": "^6.5.7",
     "@storybook/addon-ondevice-controls": "^6.5.7",
+    "@storybook/addon-links": "^6.5.14",
+    "@storybook/addon-essentials": "^6.5.14",
     "@storybook/react-native": "^6.5.7",
     "@storybook/react-vite": "^9.0.12",
     "@types/react": "~18.2.79",
