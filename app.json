@@ -1,4 +1,8 @@
 {
+  "name": "Alulu",
+  "displayName": "Alulu",
+  "slug": "alulu",
+  "version": "1.0.0",
   "expo": {
     "assetBundlePatterns": ["**/*"],
     "extra": {

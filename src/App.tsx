@@ -18,7 +18,8 @@ function App() {
 }
 
 let AppEntryPoint = App;
-if (Constants.expoConfig?.extra?.storybookEnabled === "true") {
+const storybookFlag = Constants.expoConfig?.extra?.storybookEnabled;
+if (storybookFlag === "true" || storybookFlag === true) {
   AppEntryPoint = require("../.storybook").default;
 }
 
