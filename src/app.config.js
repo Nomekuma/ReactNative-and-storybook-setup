@@ -5,6 +5,6 @@ export default ({ config }) => ({
   userInterfaceStyle: "automatic",
 
   extra: {
-    storybookEnabled: process.env.STORYBOOK_ENABLED,
+    storybookEnabled: process.env.STORYBOOKa_ENABLED ?? "false",
   },
 });
