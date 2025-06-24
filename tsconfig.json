@@ -23,6 +23,6 @@
   "include": [
     "src",
     "./src/.eslintrc.cjs"
-  ],
+, "app.config.js"  ],
 "extends": "./tsconfig.base.json",
   }
