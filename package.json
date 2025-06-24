@@ -1,7 +1,7 @@
 {
   "main": "src/expo/AppEntry.js",
   "scripts": {
-    "dev": "expo start",
+    "dev": "STORYBOOK_ENABLED='false' expo start",
     "android": "expo start --android",
     "ios": "expo start --ios",
     "web": "expo start --web",
