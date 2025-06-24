@@ -22,9 +22,7 @@ const normalizedStories = [
 ];
 
 const annotations = [
-  require("./preview"),
-  require("@storybook/react-native/preview"),
-  require("@storybook/addon-ondevice-actions/preview"),
+  require("./preview")
 ];
 
 global.STORIES = normalizedStories;
