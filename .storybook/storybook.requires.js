@@ -48,6 +48,7 @@ try {
 const getStories = () => {
   return {
     "./src/components/example/Example.native.stories.tsx": require("../src/components/example/Example.native.stories.tsx"),
+    "./src/components/theme-toggle/theme-toggle.native.stories.tsx": require("../src/components/theme-toggle/theme-toggle.native.stories.tsx"),
   };
 };
 
