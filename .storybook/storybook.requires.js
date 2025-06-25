@@ -4,8 +4,8 @@ import {
   configure,
   addDecorator,
   addParameters,
+  addArgsEnhancer,
   clearDecorators,
-   getStorybookUI,
 } from "@storybook/react-native";
 
 global.STORIES = [
@@ -20,6 +20,8 @@ global.STORIES = [
 
 import "@storybook/addon-ondevice-actions/register";
 import "@storybook/addon-ondevice-controls/register";
+
+import { argsEnhancers } from "@storybook/addon-actions/dist/modern/preset/addArgs";
 
 import { decorators, parameters } from "./preview";
 
@@ -39,6 +41,10 @@ if (parameters) {
   addParameters(parameters);
 }
 
+try {
+  argsEnhancers.forEach((enhancer) => addArgsEnhancer(enhancer));
+} catch {}
+
 const getStories = () => {
   return {
     "./src/components/example/Example.native.stories.tsx": require("../src/components/example/Example.native.stories.tsx"),
@@ -46,10 +52,3 @@ const getStories = () => {
 };
 
 configure(getStories, module, false);
-
-global.view =
-  global.view || {
-    getStorybookUI: (options) => getStorybookUI(options),
-  };
-
-export const view = global.view;

@@ -1,7 +1,8 @@
 import AsyncStorage from "@react-native-async-storage/async-storage";
-import { view } from "./storybook.requires";
+import "./storybook.requires";
+import { getStorybookUI } from "@storybook/react-native";
 
-const StorybookUIRoot = view.getStorybookUI({
+const StorybookUIRoot = getStorybookUI({
   storage: {
     getItem: AsyncStorage.getItem,
     setItem: AsyncStorage.setItem,
