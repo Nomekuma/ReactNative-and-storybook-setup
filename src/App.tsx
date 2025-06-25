@@ -3,17 +3,20 @@ import Constants from "expo-constants";
 import { NavigationContainer } from "@react-navigation/native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import { Home } from "./pages/Home";
+import { RNThemeProvider } from "../theme/RNThemeProvider";
 
 LogBox.ignoreLogs(["Warning: ...", "Require cycle: ..."]);
 const Stack = createNativeStackNavigator();
 
 function App() {
   return (
-    <NavigationContainer>
-      <Stack.Navigator initialRouteName="Home">
-        <Stack.Screen name="Home" component={Home} />
-      </Stack.Navigator>
-    </NavigationContainer>
+    <RNThemeProvider>
+      <NavigationContainer>
+        <Stack.Navigator initialRouteName="Home">
+          <Stack.Screen name="Home" component={Home} />
+        </Stack.Navigator>
+      </NavigationContainer>
+    </RNThemeProvider>
   );
 }
 
