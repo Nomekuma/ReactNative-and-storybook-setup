@@ -5,10 +5,6 @@ const config = {
     "@storybook/addon-ondevice-actions",
     "@storybook/addon-ondevice-controls",
   ],
-  framework: {
-    name: "@storybook/react-vite",
-    options: {},
-  },
 };
 
 export default config;
