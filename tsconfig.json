@@ -23,6 +23,6 @@
   "include": [
     "src",
     "./src/.eslintrc.cjs"
-, "app.config.js"  ],
+, "app.config.js", "theme/ThemeColors/color.ts"  ],
 "extends": "./tsconfig.base.json",
   }
