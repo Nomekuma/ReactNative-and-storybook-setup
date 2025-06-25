@@ -1,5 +1,5 @@
 import { Text, View } from "react-native";
-import { useRNTheme } from "@/theme/RNThemeProvider"; // Adjust the import path as necessary
+import { useRNTheme } from "@/theme/RNThemeProvider"; 
 import colors from "@/theme/ThemeColors/color";
 
 export const Example = () => {
