@@ -1,8 +1,8 @@
 import { View, Text, Pressable } from "react-native";
 import { useRNTheme, RNThemeProvider } from "../theme/RNThemeProvider";
 import colors from "../theme/ThemeColors/color";
+import ThemeToggle from "../src/components/theme-toggle/theme-toggle.native";
 import { useState } from "react";
-
 
 export const decorators = [
   (Story, { parameters }) => {
@@ -24,7 +24,7 @@ export const decorators = [
 const ThemeProviderWrapper = ({
   Story,
   parameters,
-  currentTheme,
+  _,
   setCurrentTheme,
 }) => {
   const { theme, setTheme } = useRNTheme();
@@ -54,24 +54,16 @@ const ThemeProviderWrapper = ({
         alignItems: "center",
       }}
     >
-      <Pressable
-        onPress={() => {
-          const newTheme = theme === "dark" ? "light" : "dark";
-          handleThemeChange(newTheme);
-          console.log(`Theme changed to ${newTheme}`);
-        }}
+      <ThemeToggle
         style={{
           position: "absolute",
           top: 10,
           right: 10,
-          padding: 8,
-          backgroundColor: colors[theme].primary,
-          borderRadius: 20,
-          elevation: 3,
         }}
-      >
-        <Text style={{ fontSize: 18 }}>{theme === "dark" ? "🌞" : "🌙"}</Text>
-      </Pressable>
+        onToggle={(newTheme) => {
+          handleThemeChange(newTheme);
+        }}
+      />
       <Story />
     </View>
   );
