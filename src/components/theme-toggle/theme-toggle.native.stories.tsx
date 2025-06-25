@@ -1,8 +1,9 @@
 import type { Meta, StoryObj } from "@storybook/react";
 import { View, Text } from "react-native";
 import ThemeToggle from "./theme-toggle.native";
+import { ThemeToggleProps } from "./theme-toggle.types";
 
-const meta: Meta<typeof ThemeToggle> = {
+const meta: Meta<ThemeToggleProps> = {
   title: "Components/ThemeToggle",
   component: ThemeToggle,
   parameters: {
@@ -26,10 +27,25 @@ const meta: Meta<typeof ThemeToggle> = {
       action: "theme-toggled",
       description: "Callback when theme is toggled",
     },
-  },
-  args: {
-    onToggle: (theme: "light" | "dark") => {
-      console.log(`Theme toggled to: ${theme}`);
+    lightThemeIcon: {
+      control: { type: "text" },
+      description: "Icon to show when switching to light theme",
+    },
+    darkThemeIcon: {
+      control: { type: "text" },
+      description: "Icon to show when switching to dark theme",
+    },
+    customToggle: {
+      control: { type: "text" },
+      description: "Custom toggle component to use instead of default",
+    },
+    customToggleStyle: {
+      control: { type: "object" },
+      description: "Style for the custom toggle component",
+    },
+    style: {
+      control: { type: "object" },
+      description: "Style for the toggle container",
     },
   },
 };
